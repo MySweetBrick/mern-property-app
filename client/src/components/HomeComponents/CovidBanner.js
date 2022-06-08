@@ -8,7 +8,7 @@ import {
     GreyBar,
     Body,
 
-} from '../styles/CovidBanner.styled';
+} from '../../styles/CovidBanner.styled';
 
 function CovidBanner() {
     return (

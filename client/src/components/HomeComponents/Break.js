@@ -5,7 +5,7 @@ import {
     ButtonContainer,
     ButtonInnerContainer,
     BreakButtons,
-} from '../styles/Break.styles.js';
+} from '../../styles/Break.styles.js';
 
 function Break() {
     return (

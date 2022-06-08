@@ -6,7 +6,7 @@ import {
     HeaderColorContainer,
     HeaderContainer,
     Heading,
-} from '../styles/HeroBanner.styled';
+} from '../../styles/HeroBanner.styled';
 
 function HeroBanner() {
     return (

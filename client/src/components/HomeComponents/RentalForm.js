@@ -16,12 +16,12 @@ import {
     CheckboxItems,
     CheckboxImg,
     CarCheckboxImg,
-} from '../styles/RentalForm.styled';
-import '../styles/RentalForm.css';
-import GymImg from '../images/Vector.png';
-import CarImg from '../images/CAR.png';
-import PetsImg from '../images/paw.png';
-import FurnishedImg from '../images/chair.png';
+} from '../../styles/RentalForm.styled';
+import '../../styles/RentalForm.css';
+import GymImg from '../../images/Vector.png';
+import CarImg from '../../images/CAR.png';
+import PetsImg from '../../images/paw.png';
+import FurnishedImg from '../../images/chair.png';
 
 
 function RentalForm() {

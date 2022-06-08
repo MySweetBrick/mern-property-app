@@ -26,13 +26,14 @@ background-color: white;
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
 `;
 
 export const ToggleBar = styled.div`
     width: 1920px;
     height: 40px;
     border: 1px solid #E5E5E5;
-    margin-top: 140px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;

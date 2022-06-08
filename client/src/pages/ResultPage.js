@@ -28,7 +28,7 @@ function ResultPage() {
     const useStyles = makeStyles({
         root: {
             marginTop: 20,
-        }, 
+        },
         loader: {
             width: '100%',
             display: 'flex',
@@ -38,7 +38,7 @@ function ResultPage() {
     });
 
     //Material UI styles
-    const classes=useStyles();
+    const classes = useStyles();
 
     //component state
     const [properties, setProperties] = useState([]);
@@ -81,7 +81,8 @@ function ResultPage() {
             </ToggleBar>
 
             <ResultContainer>
-                <PropertyContainer>
+              
+                    <PropertyContainer>
                     <ImageContainer />
                     <DetailsContainer>
                         <AddressContainer>Address:</AddressContainer>
@@ -105,6 +106,9 @@ function ResultPage() {
                         <Icon src={Binocular}></Icon>
                     </BinocularContainer>
                 </PropertyContainer>
+                
+                
+                
             </ResultContainer>
 
         </Background>
