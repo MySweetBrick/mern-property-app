@@ -48,6 +48,7 @@ export const ToggleBarContainer = styled.div`
     font-size: 18px;
     /* background-color: rosybrown; */
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 40px;
 `;

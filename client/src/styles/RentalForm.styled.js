@@ -49,26 +49,8 @@ export const InputContainer = styled.div`
     flex: 33%;
     font-family: 'Open Sans';
     font-size: 20px;
-`;
-
-export const LargeInputForm = styled.input`
-    width: 378px;
-    height: 50px;
-    box-sizing: border-box;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    font-family: 'Inter';
-    font-size: 16px;
-`;
-
-export const SmallInputForm = styled.input`
-    width: 160px;
-    height: 50px;
-    box-sizing: border-box;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    font-family: 'Inter';
-    font-size: 16px;
+    /* display: flex;
+    flex-direction: row; */
 `;
 
 export const SearchButton = styled.button`
@@ -107,7 +89,16 @@ export const CheckboxContainer = styled.div`
 `;
 
 export const CheckboxItems = styled.div`
-    flex: 25%;
+    flex: 23%;
+    padding: 20px;
+    white-space: nowrap;
+    /* background-color: red; */
+    font-family: 'Inter';
+
+`;
+
+export const PetCheckboxItem = styled.div`
+    flex: 30%;
     padding: 20px;
     white-space: nowrap;
     /* background-color: red; */
@@ -122,5 +113,49 @@ export const CheckboxImg = styled.img`
 
 export const CarCheckboxImg = styled.img`
     width: 25px;
-    height: 18px;
+    height: 25px;
+`;
+
+export const LargeInputSelect = styled.select`
+    width: 378px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #797979;
+`;
+
+export const SmallInputSelect = styled.select`
+    width: 160px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #797979;
+`;
+
+export const Spacer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 50px;
+`;
+
+export const SpacerLine = styled.div`
+    width: 25px;
+    height: 3px;
+    background-color: #A5A5A5;
+`;
+
+export const DoubleInputContainer = styled.div`
+    flex: 33%;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
 `;
