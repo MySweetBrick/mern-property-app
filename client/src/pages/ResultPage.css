@@ -1,0 +1,11 @@
+.ResultsPage__Container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.ResultsPage__result-parent {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
