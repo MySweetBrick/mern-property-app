@@ -49,7 +49,7 @@ function Navbar() {
                     </a>
                     </LogoContainer>
                     <LinksContainer>
-                        <NavbarLinks>Find A Rental</NavbarLinks>
+                        <NavbarLinks href='results'>Find A Rental</NavbarLinks>
                         <NavbarLinks>List A Rental</NavbarLinks>
                         <NavbarLinks>Commercial</NavbarLinks>
                         <NavbarLinks>Waiheke Escape</NavbarLinks>

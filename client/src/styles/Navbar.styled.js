@@ -88,6 +88,7 @@ export const NavbarLinks = styled.a`
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
+    color: black;
 `;
 
 export const LoginButton = styled.button`
