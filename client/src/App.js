@@ -41,6 +41,7 @@ import PropertyPage from './pages/PropertyPage';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 
 function App() {
     return (
@@ -51,6 +52,7 @@ function App() {
                     <Route exact path="/" element={<Home />} />
                 </Routes>
             </Router>
+            <Footer />
         </>
     );
 };
