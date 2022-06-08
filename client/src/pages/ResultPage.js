@@ -62,7 +62,7 @@ function ResultPage() {
                 console.log(error.response.data);
             }
         }
-        fetchData();
+        // fetchData();
         console.log(properties);
     }, [])
 
