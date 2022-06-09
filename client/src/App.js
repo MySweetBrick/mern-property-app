@@ -5,6 +5,8 @@ import './App.css';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 
+import ResultPage from './pages/ResultPage';
+
 function App() {
     return (
         <>
@@ -12,7 +14,8 @@ function App() {
             <Router>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route exact path="/results" element={<PropertyPage />} />
+                    <Route exact path="/results" element={<ResultPage />} />
+                    <Route exact path="/propertyPage" element={<PropertyPage />} />
                 </Routes>
             </Router>
             <Footer />

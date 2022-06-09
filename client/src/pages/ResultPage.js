@@ -1,42 +1,41 @@
 import { CircularProgress, Container, Grid, makeStyles } from '@material-ui/core';
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
+
 import {
-    Background,
-    ResultContainer,
     PropertyContainer,
-    ToggleBar,
-    ToggleBarContainer,
     ImageContainer,
-    Icon,
     DetailsContainer,
-    BinocularContainer,
     AddressContainer,
     PriceContainer,
     IconContainer,
     IconCounter,
+    Icon,
+    BinocularContainer,
+    ResultContainer,
+    Background,
+    ToggleBar,
+    ToggleBarContainer,
+    
 } from '../styles/ResultPage.styled';
-import Menu from '../images/listMenu.png';
-import Map from '../images/map.png';
+
 import Bed from '../images/bed.png';
 import Shower from '../images/shower.png';
 import Car from '../images/car-side.png';
 import Binocular from '../images/binoculars.png'
+import Menu from '../images/listMenu.png';
+import Map from '../images/map.png';
 
-function ResultPage() {
+const useStyles = makeStyles({
+    loader: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+});
 
-    const useStyles = makeStyles({
-        root: {
-            marginTop: 20,
-        },
-        loader: {
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }
-    });
-
+function PropertyPage() {
     //Material UI styles
     const classes = useStyles();
 
@@ -62,14 +61,13 @@ function ResultPage() {
                 console.log(error.response.data);
             }
         }
-        // fetchData();
+        fetchData();
         console.log(properties);
     }, [])
 
     return (
         <Background>
-
-            <ToggleBar>
+             <ToggleBar>
                 <ToggleBarContainer>
                     <Icon src={Menu}></Icon>
                     List
@@ -81,38 +79,41 @@ function ResultPage() {
             </ToggleBar>
 
             <ResultContainer>
-              
-                    <PropertyContainer>
-                    <ImageContainer />
-                    <DetailsContainer>
-                        <AddressContainer>Address:</AddressContainer>
-                        <PriceContainer>Price: $ /week</PriceContainer>
-                        <IconContainer>
-                            <IconCounter>
-                                <Icon src={Bed}></Icon>
-                                2
-                            </IconCounter>
-                            <IconCounter>
-                                <Icon src={Shower}></Icon>
-                                1
-                            </IconCounter>
-                            <IconCounter>
-                                <Icon src={Car}></Icon>
-                                1
-                            </IconCounter>
-                        </IconContainer>
-                    </DetailsContainer>
-                    <BinocularContainer>
-                        <Icon src={Binocular}></Icon>
-                    </BinocularContainer>
-                </PropertyContainer>
-                
-                
-                
+                {loading ? (
+                    <div className={classes.loader}>
+                        <CircularProgress size="3rem" thickness={5} />
+                    </div>
+                ) : (
+                    properties.map(property => (
+                        <PropertyContainer>
+                            <ImageContainer />
+                            <DetailsContainer>
+                                <AddressContainer>{property.address.street}, {property.address.suburb}</AddressContainer>
+                                <PriceContainer>${property.price}/week</PriceContainer>
+                                <IconContainer>
+                                    <IconCounter>
+                                        <Icon src={Bed}></Icon>
+                                        {property.bedrooms}
+                                    </IconCounter>
+                                    <IconCounter>
+                                        <Icon src={Shower}></Icon>
+                                        {property.bathrooms}
+                                    </IconCounter>
+                                    <IconCounter>
+                                        <Icon src={Car}></Icon>
+                                        1
+                                    </IconCounter>
+                                </IconContainer>
+                            </DetailsContainer>
+                            <BinocularContainer>
+                                <Icon src={Binocular}></Icon>
+                            </BinocularContainer>
+                        </PropertyContainer>
+                    ))
+                )}
             </ResultContainer>
-
         </Background>
     );
 };
 
-export default ResultPage;
+export default PropertyPage;
