@@ -15,7 +15,8 @@ export const ResultContainer = styled.div`
     height: auto;
     /* display: flex;
     flex-direction: column; */
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 `;
 
 export const PropertyContainer = styled.div`
@@ -33,7 +34,7 @@ export const ToggleBar = styled.div`
     width: 1920px;
     height: 40px;
     border: 1px solid #E5E5E5;
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

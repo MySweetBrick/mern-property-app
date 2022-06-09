@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Background,
     FormContainer,
@@ -29,6 +29,14 @@ import FurnishedImg from '../../images/chair.png';
 
 
 function RentalForm() {
+
+    const [propertyType, setPropertyType] = useState("");
+    const [suburb, setSuburb] = useState("");
+    const [priceRange, setPriceRange] = useState([200, 1000]);
+
+
+    const [filter, setFilter] = useState("");
+
     return (
         <Background>
             <FormContainer>
@@ -43,7 +51,9 @@ function RentalForm() {
                             </LargeInputSelect>
                         </InputContainer>
                         <InputContainer>Property Type <br />
-                            <LargeInputSelect>
+                            <LargeInputSelect onChange={(e) =>
+                            setPropertyType(e.target.value)
+                        }>
                                 <option>All</option>
                                 <option>House</option>
                                 <option>Townhouse</option>
@@ -73,7 +83,9 @@ function RentalForm() {
                     </LeftSide>
                     <RightSide>
                         <InputContainer>Suburb <br />
-                            <LargeInputSelect>
+                            <LargeInputSelect onChange={(e) =>
+                            setSuburb(e.target.value)
+                        }>
                                 <option>All Suburbs</option>
                                 <option>Grey Lynn</option>
                                 <option>Eden Terrace</option>
@@ -84,7 +96,9 @@ function RentalForm() {
                         </InputContainer>
                         <InputContainer>Price <br />
                             <DoubleInputContainer>
-                                <SmallInputSelect>
+                                <SmallInputSelect onChange={(e) =>
+                            setPriceRange(e.target.value)
+                        }>
                                     <option>Any</option>
                                     <option>400</option>
                                     <option>500</option>

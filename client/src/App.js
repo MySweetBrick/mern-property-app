@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import ResultPage from './pages/ResultPage';
 
 
+import ResultPage from './pages/ResultPage';
+
 function App() {
     return (
         <>

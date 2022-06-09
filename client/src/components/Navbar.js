@@ -50,7 +50,7 @@ function Navbar() {
                     </LogoContainer>
                     <LinksContainer>
                         <NavbarLinks href='results'>Find A Rental</NavbarLinks>
-                        <NavbarLinks>List A Rental</NavbarLinks>
+                        <NavbarLinks href='propertyPage'>List A Rental</NavbarLinks>
                         <NavbarLinks>Commercial</NavbarLinks>
                         <NavbarLinks>Waiheke Escape</NavbarLinks>
                         <NavbarLinks>About Us</NavbarLinks>
