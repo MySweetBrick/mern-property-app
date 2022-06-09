@@ -1,6 +1,10 @@
 import { CircularProgress, Container, Grid, makeStyles } from '@material-ui/core';
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
+import './ResultPage.css'
+import SideFilter from '../components/ResultPageComponents/SideFilter';
+
+
 import {
     Background,
     ResultContainer,
@@ -67,19 +71,10 @@ function ResultPage() {
     }, [])
 
     return (
-        <Background>
-
-            <ToggleBar>
-                <ToggleBarContainer>
-                    <Icon src={Menu}></Icon>
-                    List
-                </ToggleBarContainer>
-                <ToggleBarContainer>
-                    <Icon src={Map}></Icon>
-                    Map
-                </ToggleBarContainer>
-            </ToggleBar>
-
+        <>
+        <div className='ResultsPage__Container'>
+            <SideFilter />
+            <div className="ResultsPage__result-parent">
             <ResultContainer>
               
                     <PropertyContainer>
@@ -110,8 +105,14 @@ function ResultPage() {
                 
                 
             </ResultContainer>
+            </div>
 
-        </Background>
+
+
+
+        </div>
+
+        </>
     );
 };
 
